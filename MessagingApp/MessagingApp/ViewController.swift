@@ -16,5 +16,12 @@ class ViewController: UIViewController {
     }
 
 
+
+    @IBOutlet weak var emailAddrTextField: UITextField!
+    
+    @IBAction func loginBtnPressed(_ sender: Any) {
+        print(emailAddrTextField.text)
+    }
+
 }
 
