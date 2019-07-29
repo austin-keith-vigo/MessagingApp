@@ -7,21 +7,33 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
-
-
 
     @IBOutlet weak var emailAddrTextField: UITextField!
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        print(emailAddrTextField.text)
+        let emailAddr = "austin.keith.vigo@gmail.com"
+        let password = "123456"
+        
+        Auth.auth().signIn(withEmail: emailAddr, password: password) { [weak self] user, error in
+            guard let strongSelf = self else { return }
+            if error == nil{
+                print("in")
+            }
+            else{
+                print("not in error: \(error)")
+            }
+        }
     }
+    
 
 }
 
