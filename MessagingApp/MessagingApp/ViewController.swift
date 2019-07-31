@@ -7,21 +7,40 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("closeKeyboard")))
+        
     }
-
-
 
     @IBOutlet weak var emailAddrTextField: UITextField!
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        print(emailAddrTextField.text)
+        let emailAddr = "austin.keith.vigo@gmail.com"
+        let password = "123456"
+        
+        Auth.auth().signIn(withEmail: emailAddr, password: password) { [weak self] user, error in
+            guard let strongSelf = self else { return }
+            if error == nil{
+                self!.goToMessageBoard()
+                print("Called")
+            }
+        }
     }
+    
+    @objc func closeKeyboard(){
+        view.endEditing(true)
+    }
+    
+    func goToMessageBoard(){
+        self.performSegue(withIdentifier: "toMessageBoardSegue", sender: self)
+    }
+    
 
 }
 
