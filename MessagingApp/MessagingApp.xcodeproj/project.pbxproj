@@ -14,6 +14,7 @@
 		D9CDB87222EF9B0C0066F5FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CDB87022EF9B0C0066F5FF /* Main.storyboard */; };
 		D9CDB87422EF9B0E0066F5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9CDB87322EF9B0E0066F5FF /* Assets.xcassets */; };
 		D9CDB87722EF9B0E0066F5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CDB87522EF9B0E0066F5FF /* LaunchScreen.storyboard */; };
+		D9E325CB22EFAB570097C0B3 /* MessageBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E325CA22EFAB570097C0B3 /* MessageBoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D9CDB87322EF9B0E0066F5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9CDB87622EF9B0E0066F5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9CDB87822EF9B0E0066F5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9E325CA22EFAB570097C0B3 /* MessageBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				D9CDB86C22EF9B0C0066F5FF /* AppDelegate.swift */,
 				D9CDB86E22EF9B0C0066F5FF /* ViewController.swift */,
 				D9CDB87022EF9B0C0066F5FF /* Main.storyboard */,
+				D9E325CA22EFAB570097C0B3 /* MessageBoardViewController.swift */,
 				D9CDB87322EF9B0E0066F5FF /* Assets.xcassets */,
 				D9CDB87522EF9B0E0066F5FF /* LaunchScreen.storyboard */,
 				D9CDB87822EF9B0E0066F5FF /* Info.plist */,
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9CDB86F22EF9B0C0066F5FF /* ViewController.swift in Sources */,
+				D9E325CB22EFAB570097C0B3 /* MessageBoardViewController.swift in Sources */,
 				D9CDB86D22EF9B0C0066F5FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

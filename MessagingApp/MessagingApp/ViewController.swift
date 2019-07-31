@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("closeKeyboard")))
         
     }
 
@@ -26,12 +27,18 @@ class ViewController: UIViewController {
         Auth.auth().signIn(withEmail: emailAddr, password: password) { [weak self] user, error in
             guard let strongSelf = self else { return }
             if error == nil{
-                print("in")
-            }
-            else{
-                print("not in error: \(error)")
+                self!.goToMessageBoard()
+                print("Called")
             }
         }
+    }
+    
+    @objc func closeKeyboard(){
+        view.endEditing(true)
+    }
+    
+    func goToMessageBoard(){
+        self.performSegue(withIdentifier: "toMessageBoardSegue", sender: self)
     }
     
 
